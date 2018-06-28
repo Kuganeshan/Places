@@ -76,6 +76,16 @@ server.get('/historical', (req, res) => {
     console.log(errorMessage);
   });
 });
+
+server.post('/delete', (req,res) => {
+  filemgr.deleteAll().then((result) => {
+    filteredResults = result;
+    res.render('historical.hbs');
+  }).catch((errorMessage) => {
+    console.log(errorMessage);
+  });
+});
+
 const extractData = (originalResults) => {
   var placesObj = {
     table : [],
