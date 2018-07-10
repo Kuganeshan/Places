@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import { Switch, Route } from 'react-router-dom';
+import Main from './components/Main';
+import Historical from './components/Historical';
+import Form from './components/Form';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-          <h1>HELLO WORLD</h1>
-        </p>
+      <div>
+        <Navbar />
+        <div>
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/form" component={Form} />
+            <Route exact path="/historical" component={Historical} />
+          </Switch>
+        </div>
       </div>
     );
   }
