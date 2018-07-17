@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Home</title>
+  <title>Places</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,10 +17,10 @@
   <p>Show the result of Places API call</p>
 </div>
 
-<div class="container">
+<div class="row container-fluid">
   <table class="table table-striped">
-   {{#list items}}<tr><td>{{name}}</td><td>{{address}}</td><td><img src={{photo_reference}} width="200" height="200"></td></tr>{{/list}}
- </table>
+     {{#list items}}<tr><td>{{name}}</td><td>{{address}}</td><td><img src={{photo_reference}} width="200" height="200"></td></tr>{{/list}}
+  </table>
 </div>
 
 </body>

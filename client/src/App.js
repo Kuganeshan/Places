@@ -6,7 +6,6 @@ import Main from './components/Main';
 import Historical from './components/Historical';
 import Form from './components/Form';
 
-
 class App extends Component {
   render() {
     return (
