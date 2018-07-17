@@ -60,7 +60,7 @@ server.post('/getplaces', (req, res) => {
   const addr = req.body.address;
   const placetype = req.body.placetype;
   const name = req.body.name;
-
+  //commment
   const locationReq = `https://maps.googleapis.com/maps/api/geocode/json?address=${addr}&key=AIzaSyCGCxQf4yOMG9yCsqQ9CzHKjUcs14fqDY4`;
 
   axios
